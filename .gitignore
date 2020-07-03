@@ -6,7 +6,7 @@ server/node_modules
 web/node_modules
 /.pnp
 .pnp.js
-
+/.vscode
 # testing
 /coverage
 
@@ -23,3 +23,7 @@ web/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+server/yarn.lock
+mobile/yarn.lock
+web/yarn.lock
