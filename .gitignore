@@ -27,3 +27,5 @@ yarn-error.log*
 server/yarn.lock
 mobile/yarn.lock
 web/yarn.lock
+
+mobile/.expo
