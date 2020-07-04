@@ -24,6 +24,7 @@ interface IBGECityResponse {
 
 const CreatePoint = () => {
     const [items, setItems] = useState<Item[]>([])
+    
     const [UFs, setUFs] = useState<string[]>([])
     const [selectedUF, setSelectedUF] = useState('0')
 
@@ -113,7 +114,6 @@ const CreatePoint = () => {
         } else {
             setSelectedItems([...selectedItems, id])
         }
-
     }
 
     async function handleSubmit(event: FormEvent) {
