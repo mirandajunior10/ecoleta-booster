@@ -29,3 +29,4 @@ mobile/yarn.lock
 web/yarn.lock
 
 mobile/.expo
+mobile/.expo/packager-info.json
