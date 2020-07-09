@@ -20,6 +20,7 @@ interface Point {
   id: number;
   name: string;
   image: string;
+  image_url: string;
   latitude: number;
   longitude: number;
 }
@@ -37,7 +38,7 @@ const Points = () => {
   const [points, setPoints] = useState<Point[]>([])
 
   const navigation = useNavigation()
-  const params  = useRoute().params as Params;
+  const params = useRoute().params as Params;
 
   useEffect(() => {
     async function loadPosition() {
@@ -79,7 +80,7 @@ const Points = () => {
     })
 
 
-  },[selectedItems])
+  }, [selectedItems])
 
   function hanldeSelectItem(id: number) {
 
@@ -128,15 +129,8 @@ const Points = () => {
                       longitude: point.longitude,
                     }}>
                     <View style={styles.mapMarkerContainer}>
-                      <Image
-                        style={styles.mapMarkerImage}
-                        source={
-                          {
-                            uri: point.image
-                          }
-                        } />
-                      <Text style={styles.mapMarkerTitle}>{point.name}</Text>
-
+                      <Image style={styles.mapMarkerImage} source={{ uri: point.image_url }} />
+                      <Text style={styles.mapMarkerTitle}>{point.name}</Text>  
                     </View>
                   </Marker>
 

@@ -8,7 +8,7 @@ import axios from "axios";
 
 import logo from '../../assets/logo.svg'
 import { LeafletMouseEvent } from "leaflet";
-
+import Dropzone from "../../components/Dropzone";
 interface Item {
     id: number,
     title: string,
@@ -24,7 +24,7 @@ interface IBGECityResponse {
 
 const CreatePoint = () => {
     const [items, setItems] = useState<Item[]>([])
-    
+
     const [UFs, setUFs] = useState<string[]>([])
     const [selectedUF, setSelectedUF] = useState('0')
 
@@ -41,6 +41,8 @@ const CreatePoint = () => {
     })
 
     const [selectedItems, setSelectedItems] = useState<number[]>([])
+
+    const [selectedFile, setSelectedFile] = useState<File>()
 
     const history = useHistory()
 
@@ -117,20 +119,25 @@ const CreatePoint = () => {
     }
 
     async function handleSubmit(event: FormEvent) {
+
+
         event.preventDefault()
         const { name, email, whatsapp } = formData
         const [latitude, longitude] = position
 
-        const data = {
-            name,
-            email,
-            whatsapp,
-            uf: selectedUF,
-            city: selectedCity,
-            latitude,
-            longitude,
-            items: selectedItems
-        }
+
+        const data = new FormData();
+
+        data.append('name', name);
+        data.append('email', email);
+        data.append('whatsapp', whatsapp);
+        data.append('uf', selectedUF);
+        data.append('city', selectedCity);
+        data.append('latitude', String(latitude));
+        data.append('longitude', String(longitude));
+        data.append('items', selectedItems.join(','));
+        if (selectedFile) data.append('image', selectedFile);
+
         try {
             await api.post('points', data)
             alert('Ponto de coleta criado com sucesso!')
@@ -152,6 +159,8 @@ const CreatePoint = () => {
             </header>
             <form onSubmit={handleSubmit}>
                 <h1>Cadastro do <br /> ponto de coleta</h1>
+
+                <Dropzone onFileUploaded={setSelectedFile} />
 
                 <fieldset>
                     <legend>
