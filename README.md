@@ -34,11 +34,11 @@ Antes de mais nada, entre em cada uma das pastas e execute o comando:
  ### Se você usa o yarn
  > yarn knex:migrate
  
-<p  align="center">e</p>
+<br/>
 
  > yarn knex:seed
  
-<p  align="center">e</p>
+<br/>
 
  > yarn dev
  
@@ -46,11 +46,11 @@ Antes de mais nada, entre em cada uma das pastas e execute o comando:
   ### Se você usa o npm
  > npm run knex:migrate
  
-<p  align="center">e</p>
+<br/>
 
  > npm run knex:seed
  
-<p  align="center">e</p>
+<br/>
 
  > npm run dev
  
