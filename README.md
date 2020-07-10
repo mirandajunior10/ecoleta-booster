@@ -19,6 +19,7 @@ Projeto desenvolvido durante a Next Level Week #01
 - [x] Express
 - [x] Celebrate 
 - [x] Joi
+- [x] Multer
 
 
 ## Getting started
