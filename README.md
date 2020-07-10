@@ -11,11 +11,11 @@ Projeto desenvolvido durante a Next Level Week #01
 ## Tecnologias utilizadas
 - [x] React
 - [x] React Native
-- [x] Javascript
 - [x] Expo
 - [x] NodeJS
 - [x] TypeScript
 - [x] SQLite3
 - [x] KnexJS
 - [x] Express
-- [x] Celebrate Joi
+- [x] Celebrate 
+- [x] Joi
