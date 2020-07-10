@@ -19,3 +19,31 @@ Projeto desenvolvido durante a Next Level Week #01
 - [x] Express
 - [x] Celebrate 
 - [x] Joi
+
+
+## Getting started
+ Na pasta server, execute os comandos:
+ ### Se você usa o yarn
+ > yarn knex:migrate
+ ##### e
+ > yarn knex:seed
+ ##### e
+ > yarn dev
+ 
+ 
+  ### Se você usa o npm
+ > npm run knex:migrate
+ ##### e
+ > npm run knex:seed
+  ##### e
+ > npm run dev
+ 
+ Pronto! agora é só escolher a pasta web ou mobile e iniciar o projeto executando o comando:
+ 
+ ### Se você usa o yarn
+ > yarn start
+ 
+  ### Se você usa o npm
+ > npm run start
+ 
+ 
