@@ -22,20 +22,36 @@ Projeto desenvolvido durante a Next Level Week #01
 
 
 ## Getting started
- Na pasta server, execute os comandos:
+
+Antes de mais nada, entre em cada uma das pastas e execute o comando:
+ ### Se você usa o yarn
+ > yarn install
+ 
+ ### Se você usa o npm
+ > npm install
+
+ Logo após,na pasta server, execute os comandos:
  ### Se você usa o yarn
  > yarn knex:migrate
- ##### e
+ 
+<p  align="center">e</p>
+
  > yarn knex:seed
- ##### e
+ 
+<p  align="center">e</p>
+
  > yarn dev
  
  
   ### Se você usa o npm
  > npm run knex:migrate
- ##### e
+ 
+<p  align="center">e</p>
+
  > npm run knex:seed
-  ##### e
+ 
+<p  align="center">e</p>
+
  > npm run dev
  
  Pronto! agora é só escolher a pasta web ou mobile e iniciar o projeto executando o comando:
